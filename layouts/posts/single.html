@@ -1,0 +1,56 @@
+{{ define "content" }}
+  <div class="container post-list">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">{{ .Title }}</h1>
+        {{ if gt .WordCount 360 }}
+          <span class="reading-time">({{ div .WordCount 180 }} min. read)</span>
+        {{ end }}
+      </header>
+
+      <div class="post-meta">
+        Posted on
+        {{ .Date.Format "Jan 2, 2006" }}
+        {{ if .Params.shared }}
+          — shared on
+          {{ $length := len .Params.shared }}
+          {{ range $index, $element := .Params.shared }}
+            <a href="{{ .url }}">{{ .platform }}</a>
+            {{- if and (lt (add $index 1) $length) (gt $length 1) -}}
+              {{- if eq (add $index 2) $length }}and{{ else }},{{ end -}}
+            {{- end -}}
+          {{ end }}
+        {{ end }}
+      </div>
+
+      <div class="post-content">
+        {{ .Content }}
+      </div>
+
+      <footer class="revision-history">
+        <a
+          href="https://github.com/Dan0xE/blog/commits/main/content/{{ .File.Path }}"
+        >
+          ( revision history )
+        </a>
+      </footer>
+    </article>
+  </div>
+
+  <script>
+    function normalizeLink(path) {
+      return path
+        .replace(/\\/g, '/')
+        .replace(/%5c/gi, '/')
+        .replace(/\/+/g, '/')
+        .replace(/\/+$/, '');
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const revisionLinks = document.querySelectorAll('.revision-history a');
+      revisionLinks.forEach((link) => {
+        link.href = normalizeLink(link.href);
+      });
+    });
+  </script>
+{{ end }}

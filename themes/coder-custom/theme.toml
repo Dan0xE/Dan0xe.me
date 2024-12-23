@@ -1,0 +1,6 @@
+name = "coder-custom"
+license = "MIT"
+baseTheme = "hugo-coder"
+
+[params]
+customCSS = ["css/custom.css"]

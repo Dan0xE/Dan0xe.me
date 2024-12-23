@@ -1,0 +1,86 @@
+baseURL = 'https://dan0xe.me/'
+languageCode = 'en-us'
+title = 'Dan0xE'
+theme = ["coder-custom", "hugo-coder"]
+languagecode = 'en'
+defaultcontentlanguage = 'en'
+
+[params]
+author = "Dan0xE"
+info = "Software Engineer & Security Researcher"
+description = "Dan0xE's thoughts & notes"
+keywords = "blog,developer,personal"
+colorScheme = "auto"
+hidecolorschemetoggle = false
+avatarurl = "images/avatar.jpg"
+math = true
+mainSections = ["posts"]
+customCSS = ["css/custom.css"]
+
+[[params.social]]
+name = "Github"
+icon = "fa fa-github fa-2x"
+weight = 1
+url = "https://github.com/Dan0xE/"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "fa fa-linkedin fa-2x"
+weight = 2
+url = "https://linkedin.com/in/ubervisor"
+
+[[params.social]]
+name = "Twitch"
+icon = "fa fa-twitch fa-2x"
+weight = 3
+url = "https://twitch.tv/danisbored"
+
+[[params.social]]
+name = "YouTube"
+icon = "fa fa-youtube fa-2x"
+weight = 4
+url = "https://youtube.com/@Dan0xe-EU"
+
+[[params.social]]
+name = "Bluesky"
+icon = "fa-brands fa-bluesky fa-2x"
+weight = 5
+url = "https://bsky.app/profile/dan0xe.bsky.social"
+
+[[params.social]]
+name = "SoundCloud"
+icon = "fa fa-soundcloud fa-2x"
+weight = 6
+url = "https://soundcloud.com/m3dub"
+
+[[params.social]]
+name = "Email"
+icon = "fa fa-envelope fa-2x"
+weight = 7
+url = "mailto:contact@dan0xe.me"
+
+[menu]
+[[menu.main]]
+name = "About"
+url = "/"
+weight = 1
+[[menu.main]]
+name = "Blog"
+url = "/posts/"
+weight = 2
+
+[markup.highlight]
+noClasses = false
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[server]
+[[server.headers]]
+for = "/**"
+[server.headers.values]
+Content-Security-Policy = "default-src 'self' dan0xe.me; script-src 'self' 'unsafe-inline' cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' cdn.jsdelivr.net; img-src 'self' data: github.com; font-src 'self' cdn.jsdelivr.net data:; connect-src 'self'"
+Referrer-Policy = "strict-origin-when-cross-origin"
+X-Content-Type-Options = "nosniff"
+X-Frame-Options = "DENY"
+X-XSS-Protection = "1; mode=block"

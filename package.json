@@ -1,0 +1,15 @@
+{
+  "name": "Dan0xe",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "scripts": {
+    "format": "prettier --write \"**/*.{html,css,md,toml}\"",
+    "format:check": "prettier --check \"**/*.{html,css,md,toml}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "prettier-plugin-go-template": "^0.0.15",
+    "prettier-plugin-toml": "^2.0.1"
+  }
+}
