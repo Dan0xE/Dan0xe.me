@@ -347,6 +347,8 @@ p {
   .footer-content span {
     display: block;
     margin: 0.5rem 0;
+    padding-bottom: 1rem;
+    position: relative;
   }
 
   .footer-content .separator {
@@ -355,10 +357,22 @@ p {
 
   .footer-content span:not(.separator):not(:last-child)::after {
     content: "";
-    display: block;
-    width: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
     height: 1px;
     background-color: var(--border);
-    margin: 1rem auto 0;
+  }
+
+  .footer-content span:not(.separator):not(:last-child)::before {
+    content: "·🎄·";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--background);
+    padding: 0 10px;
+    z-index: 1;
   }
 }
