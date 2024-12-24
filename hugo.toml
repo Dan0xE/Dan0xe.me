@@ -64,6 +64,7 @@ url = "mailto:contact@dan0xe.me"
 name = "About"
 url = "/"
 weight = 1
+
 [[menu.main]]
 name = "Blog"
 url = "/posts/"
