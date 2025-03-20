@@ -366,7 +366,7 @@ p {
   }
 
   .footer-content span:not(.separator):not(:last-child)::before {
-    content: "·🎄·";
+    content: "·";
     position: absolute;
     bottom: -12px;
     left: 50%;
