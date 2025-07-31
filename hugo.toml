@@ -10,7 +10,7 @@ author = "Dan0xE"
 info = "Software Engineer & Security Researcher"
 description = "Dan0xE's thoughts & notes"
 keywords = "blog,developer,personal"
-colorScheme = "auto"
+colorScheme = "dark"
 hidecolorschemetoggle = false
 avatarurl = "images/avatar.jpg"
 math = true
@@ -80,7 +80,7 @@ unsafe = true
 [[server.headers]]
 for = "/**"
 [server.headers.values]
-Content-Security-Policy = "default-src 'self' dan0xe.me; script-src 'self' 'unsafe-inline' cdn.jsdelivr.net *.cloudflareinsights.com; style-src 'self' 'unsafe-inline' cdn.jsdelivr.net; img-src 'self' data: github.com; font-src 'self' cdn.jsdelivr.net data:; connect-src 'self' *.cloudflareinsights.com"
+Content-Security-Policy = "default-src 'self' dan0xe.me; script-src 'self' 'unsafe-inline' cdn.jsdelivr.net *.cloudflareinsights.com; style-src 'self' 'unsafe-inline' cdn.jsdelivr.net fonts.googleapis.com; img-src 'self' data: github.com; font-src 'self' cdn.jsdelivr.net fonts.gstatic.com data:; connect-src 'self' *.cloudflareinsights.com fonts.googleapis.com fonts.gstatic.com"
 Referrer-Policy = "strict-origin-when-cross-origin"
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
