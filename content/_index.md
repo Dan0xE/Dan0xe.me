@@ -5,9 +5,9 @@ description = "Software Engineer & Security Researcher"
 
 Hi there!
 
-I'm a senior backend / reverse engineer at
-<a href="https://loyalift.com">Loyalift</a> and part-time security researcher at
-<a href="https://xang.engineering">Xang Engineering</a>.
+I'm a consultant at <a href="https://back.engineering">Back Engineering</a> and
+part-time security researcher at <a href="https://xang.engineering">Xang
+Engineering</a>.
 
 I work on systems programming, full-stack development, and reverse engineering,
 building tools ranging from VST plugins at
