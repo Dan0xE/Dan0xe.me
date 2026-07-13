@@ -1,0 +1,38 @@
+<nav class="navigation" aria-label="Primary navigation">
+  <div class="container">
+    <div class="navigation-actions">
+      {{ if .Site.Menus.main }}
+        <ul class="navigation-list">
+          {{ range sort .Site.Menus.main }}
+            {{ $url := index (apply (slice .URL) (.Params.urlFunc | default "relLangURL") ".") 0 }}
+            {{ $isActive := eq $.RelPermalink $url }}
+            {{ if and (ne $url "/") (hasPrefix $.RelPermalink $url) }}
+              {{ $isActive = true }}
+            {{ end }}
+            <li class="navigation-item">
+              <a
+                class="navigation-link {{ .Params.class }}"
+                href="{{ $url }}"
+                {{ if $isActive }}aria-current="page"{{ end }}
+              >
+                {{ .Name }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+
+      {{ if not .Site.Params.hideColorSchemeToggle }}
+        <button
+          id="dark-mode-toggle"
+          class="theme-toggle"
+          type="button"
+          aria-label="Toggle color scheme"
+          title="Toggle color scheme"
+        >
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </button>
+      {{ end }}
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,9 @@
+<footer class="site-footer">
+  <div class="container footer-content">
+    <span>&copy; {{ now.Format "2006" }} {{ .Site.Title }}</span>
+    <div class="footer-links">
+      <a href="{{ "index.xml" | relURL }}" type="application/rss+xml">RSS</a>
+      <a href="{{ "dan0xe.ssh.pub" | relURL }}" download>Public key</a>
+    </div>
+  </div>
+</footer>

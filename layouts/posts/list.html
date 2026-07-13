@@ -1,20 +1,22 @@
+{{ define "title" }}{{ .Title }} · {{ .Site.Title }}{{ end }}
+
 {{ define "content" }}
   <div class="container post-list">
-    <h1 class="section-header">Notes & Writings</h1>
+    <h1 class="section-header">{{ .Title }}</h1>
     {{ if .Pages }}
       {{ range .Pages.ByDate.Reverse }}
         <article class="post-entry">
-          <div class="post-header">
+          <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
+            {{ .Date.Format "Jan 2, 2006" }}
+          </time>
+          <div class="post-entry-body">
             <h2 class="post-title">
               <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             </h2>
-            <time class="post-date">{{ .Date.Format "Jan 2, 2006" }}</time>
+            {{ with .Description }}
+              <p class="post-excerpt">{{ . }}</p>
+            {{ end }}
           </div>
-          {{ with .Content }}
-            <div class="post-excerpt">
-              {{ index (split . "</p>") 0 | safeHTML }}
-            </div>
-          {{ end }}
         </article>
       {{ end }}
     {{ else }}
