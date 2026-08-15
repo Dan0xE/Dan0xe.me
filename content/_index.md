@@ -5,8 +5,9 @@ description = "Software Engineer & Security Researcher"
 
 Hi there!
 
-I'm an integration specialist at <a href="https://tracify.ai">Tracify</a> and
-consultant at <a href="https://back.engineering">Back Engineering</a>.
+I'm Daniel Oppermann, an integration specialist at
+<a href="https://tracify.ai">Tracify</a> and consultant at
+<a href="https://back.engineering">Back Engineering</a>.
 
 I work on systems programming, full-stack development, and reverse engineering,
 building tools ranging from VST plugins at

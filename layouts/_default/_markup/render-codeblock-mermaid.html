@@ -1,0 +1,4 @@
+{{- page.Store.Set "hasMermaid" true -}}
+<div class="mermaid-code-block">
+  {{- .Inner | htmlEscape | safeHTML }}
+</div>

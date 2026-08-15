@@ -1,70 +1,59 @@
-lockfileVersion: '9.0'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-importers:
-
-  .:
-    devDependencies:
-      prettier:
-        specifier: ^3.4.2
-        version: 3.4.2
-      prettier-plugin-go-template:
-        specifier: ^0.0.15
-        version: 0.0.15(prettier@3.4.2)
-      prettier-plugin-toml:
-        specifier: ^2.0.1
-        version: 2.0.1(prettier@3.4.2)
+devDependencies:
+  prettier:
+    specifier: ^3.4.2
+    version: 3.9.6
+  prettier-plugin-go-template:
+    specifier: ^0.0.15
+    version: 0.0.15(prettier@3.9.6)
+  prettier-plugin-toml:
+    specifier: ^2.0.1
+    version: 2.0.6(prettier@3.9.6)
 
 packages:
 
-  '@taplo/core@0.1.1':
-    resolution: {integrity: sha512-BG/zLGf5wiNXGEVPvUAAX/4ilB3PwDUY2o0MV0y47mZbDZ9ad9UK/cIQsILat3bqbPJsALVbU6k3cskNZ3vAQg==}
+  /@taplo/core@0.2.0:
+    resolution: {integrity: sha512-r8bl54Zj1In3QLkiW/ex694bVzpPJ9EhwqT9xkcUVODnVUGirdB1JTsmiIv0o1uwqZiwhi8xNnTOQBRQCpizrQ==}
+    dev: true
 
-  '@taplo/lib@0.4.0-alpha.2':
-    resolution: {integrity: sha512-DV/Re3DPVY+BhBtLZ3dmP4mP6YMLSsgq9qGLXwOV38lvNF/fBlgvQswzlXmzCEefL/3q2eMoefZpOI/+GLuCNA==}
+  /@taplo/lib@0.5.0:
+    resolution: {integrity: sha512-+xIqpQXJco3T+VGaTTwmhxLa51qpkQxCjRwezjFZgr+l21ExlywJFcDfTrNmL6lG6tqb0h8GyJKO3UPGPtSCWg==}
+    dependencies:
+      '@taplo/core': 0.2.0
+    dev: true
 
-  prettier-plugin-go-template@0.0.15:
+  /prettier-plugin-go-template@0.0.15(prettier@3.9.6):
     resolution: {integrity: sha512-WqU92E1NokWYNZ9mLE6ijoRg6LtIGdLMePt2C7UBDjXeDH9okcRI3zRqtnWR4s5AloiqyvZ66jNBAa9tmRY5EQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       prettier: ^3.0.0
+    dependencies:
+      prettier: 3.9.6
+      ulid: 2.4.0
+    dev: true
 
-  prettier-plugin-toml@2.0.1:
-    resolution: {integrity: sha512-99z1YOkViECHtXQjGIigd3talI/ybUI1zB3yniAwUrlWBXupNXThB1hM6bwSMUEj2/+tomTlMtT98F5t4s8IWA==}
+  /prettier-plugin-toml@2.0.6(prettier@3.9.6):
+    resolution: {integrity: sha512-12N/wBuHa9jd/KVy9pRP20NMKxQfQLMseQCt66lIbLaPLItvGUcSIryE1eZZMJ7loSws6Ig3M2Elc2EreNh76w==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       prettier: ^3.0.3
+    dependencies:
+      '@taplo/lib': 0.5.0
+      prettier: 3.9.6
+    dev: true
 
-  prettier@3.4.2:
-    resolution: {integrity: sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==}
+  /prettier@3.9.6:
+    resolution: {integrity: sha512-OpN0zzVdiaiAhxpuuj5efpIS4sY9j7bY6uR5mnj5yPzGkdkjNKSJeUThPb60Jw29QuAZgA4o+/iB49kFiaBX6g==}
     engines: {node: '>=14'}
     hasBin: true
+    dev: true
 
-  ulid@2.3.0:
-    resolution: {integrity: sha512-keqHubrlpvT6G2wH0OEfSW4mquYRcbe/J8NMmveoQOjUqmo+hXtO+ORCpWhdbZ7k72UtY61BL7haGxW6enBnjw==}
+  /ulid@2.4.0:
+    resolution: {integrity: sha512-fIRiVTJNcSRmXKPZtGzFQv9WRrZ3M9eoptl/teFJvjOzmpU+/K/JH6HZ8deBfb5vMEpicJcLn7JmvdknlMq7Zg==}
     hasBin: true
-
-snapshots:
-
-  '@taplo/core@0.1.1': {}
-
-  '@taplo/lib@0.4.0-alpha.2':
-    dependencies:
-      '@taplo/core': 0.1.1
-
-  prettier-plugin-go-template@0.0.15(prettier@3.4.2):
-    dependencies:
-      prettier: 3.4.2
-      ulid: 2.3.0
-
-  prettier-plugin-toml@2.0.1(prettier@3.4.2):
-    dependencies:
-      '@taplo/lib': 0.4.0-alpha.2
-      prettier: 3.4.2
-
-  prettier@3.4.2: {}
-
-  ulid@2.3.0: {}
+    dev: true
