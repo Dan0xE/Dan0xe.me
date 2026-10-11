@@ -1,0 +1,4 @@
+{{- $id := .Get "id" | default (printf "sidenote-%d" .Ordinal) -}}
+<aside class="sidenote" id="{{ $id }}" role="note" aria-label="Side note">
+  {{ .Page.RenderString (dict "display" "block") .Inner }}
+</aside>

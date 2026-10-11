@@ -1,0 +1,19 @@
+{{ define "content" }}
+  <div class="container home">
+    <header class="home-profile">
+      {{ partial "home/avatar.html" . }}
+      <div class="home-identity">
+        {{ partial "home/author.html" . }}
+      </div>
+    </header>
+    <div class="about-content">
+      {{ .Content }}
+    </div>
+    {{ if .Site.Params.social }}
+      <nav class="home-social" aria-label="Social and contact links">
+        {{ partial "home/social.html" . }}
+      </nav>
+    {{ end }}
+    {{ partial "home/extensions.html" . }}
+  </div>
+{{ end }}

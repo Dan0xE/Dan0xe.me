@@ -19,4 +19,4 @@ I primarily use Rust and Go, along with TypeScript and React.
 I occasionally write about my open-source work and development experiences or
 other things I find interesting.
 
-You can find my projects, music and writing through the links above.
+You can find my projects, music and writing through the links on this page.
